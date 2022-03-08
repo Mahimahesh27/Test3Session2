@@ -1,4 +1,5 @@
-#include<stdio.h>
+
+4#include<stdio.h>
 struct _fraction
 {
   int num,den;
