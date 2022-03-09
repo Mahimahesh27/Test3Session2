@@ -1,26 +1,26 @@
 #include<stdio.h>
 typedef struct _fraction 
 {
-    int num,den;
+    int Num,Den;
 }F;
 F input_fraction()
 {
     F f;
     printf("enter num,den: \n ");
-    scanf("%d%d",&f.num,&f.den);
+    scanf("%d%d",&f.Num,&f.Den);
     return f;
 }
 F smallest_fraction(F f1,F f2,F f3)
 {
-    int cd=f1.den*f2.den*f3.den;
-    int f1num=(f1.num*cd)/f1.den;
-    int f2num=(f2.num*cd)/f2.den;
-    int f3num=(f3.num*cd)/f3.den;
+    int cd=f1.Den*f2.Den*f3.Den;
+    int f1num=(f1.Num*cd)/f1.Den;
+    int f2num=(f2.Num*cd)/f2.Den;
+    int f3num=(f3.Num*cd)/f3.Den;
     if(f1num<f2num && f1num<f3num)
     {
         return f1;
     }
-    else if(f2num<f3num)
+    else if(f2Num<f3Num)
     {
         return f2;
     }
@@ -31,17 +31,17 @@ F smallest_fraction(F f1,F f2,F f3)
 }
 void output(F f1,F f2,F f3,F smallest)
 {
-    if(f1.num==smallest.num && f1.den==smallest.den)
+    if(f1.Num==smallest.Num && f1.Den==smallest.Den)
     {
-        printf("the smallest fraction among %d/%d , %d/%d and %d/%d is %d/%d",f1.num,f1.den,f2.num,f2.den,f3.num,f3.den,smallest.num,smallest.den);
+        printf("the smallest fraction among %d/%d , %d/%d and %d/%d is %d/%d",f1.Num,f1.Den,f2.Num,f2.Den,f3.Num,f3.Den,smallest.Num,smallest.Den);
     }
-    else if(f2.num==smallest.num && f2.den==smallest.den)
+    else if(f2.Num==smallest.Num && f2.Den==smallest.Den)
     {
-         printf("the smallest fraction among %d/%d , %d/%d and %d/%d is %d/%d",f1.num,f1.den,f2.num,f2.den,f3.num,f3.den,smallest.num,smallest.den);
+         printf("the smallest fraction among %d/%d , %d/%d and %d/%d is %d/%d",f1.Num,f1.Den,f2.Num,f2.Den,f3.Num,f3.Den,smallest.Num,smallest.Den);
     }
     else
     {
-         printf("the smallest fraction among %d/%d , %d/%d and %d/%d is %d/%d",f1.num,f1.den,f2.num,f2.den,f3.num,f3.den,smallest.num,smallest.den);
+         printf("the smallest fraction among %d/%d , %d/%d and %d/%d is %d/%d",f1.Num,f1.Den,f2.Num,f2.Den,f3.Num,f3.Den,smallest.Num,smallest.Den);
     }
 }
 int main()
